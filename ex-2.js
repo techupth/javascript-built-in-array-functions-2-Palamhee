@@ -373,6 +373,11 @@ const bills = [
   },
 ];
 
-// Start coding here
-
-const newBills;
+function displayMemberTransOnly(bills) {
+  return bills.filter(memberOnly);
+}
+function memberOnly(bill) {
+  return bill.member !== null;
+}
+const newBills = displayMemberTransOnly(bills);
+console.log(newBills);

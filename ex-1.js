@@ -373,4 +373,14 @@ const bills = [
   },
 ];
 
-// Start coding here
+function sumTotal(bills) {
+  const totalSummary = bills.reduce(gatherTotal,0);
+  return `Total bill transaction is ${totalSummary}`;
+}
+
+function gatherTotal(acc, crr) {
+  return acc + crr.total;
+}
+
+const result = sumTotal(bills);
+console.log(result)
